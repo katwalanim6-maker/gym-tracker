@@ -227,3 +227,254 @@ progress::-webkit-progress-value{
     }
 
 }
+
+/* ===========================
+   FOOD SEARCH MODAL
+=========================== */
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+    backdrop-filter:blur(8px);
+    justify-content:center;
+    align-items:flex-end;
+    z-index:1000;
+}
+
+.modal.show{
+    display:flex;
+}
+
+.modalContent{
+    width:100%;
+    max-height:85vh;
+    background:#111;
+    border-radius:24px 24px 0 0;
+    padding:20px;
+    overflow-y:auto;
+    animation:slideUp .25s ease;
+}
+
+@keyframes slideUp{
+
+    from{
+        transform:translateY(100%);
+    }
+
+    to{
+        transform:translateY(0);
+    }
+
+}
+
+/* ===========================
+   SEARCH BAR
+=========================== */
+
+#foodSearch{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:18px;
+    background:#1b1b1b;
+    color:#fff;
+    font-size:16px;
+    margin-bottom:20px;
+    outline:none;
+}
+
+/* ===========================
+   FAVORITES
+=========================== */
+
+#favoriteFoods{
+    display:flex;
+    gap:10px;
+    overflow-x:auto;
+    padding-bottom:15px;
+    margin-bottom:15px;
+}
+
+.favoriteCard{
+
+    min-width:120px;
+
+    background:#1c1c1c;
+
+    border-radius:18px;
+
+    padding:14px;
+
+    text-align:center;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.favoriteCard:active{
+
+    transform:scale(.96);
+
+}
+
+.favoriteEmoji{
+
+    font-size:28px;
+
+}
+
+.favoriteName{
+
+    margin-top:8px;
+
+    font-size:14px;
+
+}
+
+/* ===========================
+   FOOD RESULTS
+=========================== */
+
+#foodResults{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+.foodCard{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:#1b1b1b;
+
+    border-radius:18px;
+
+    padding:16px;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.foodCard:active{
+
+    transform:scale(.98);
+
+}
+
+.foodLeft{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.foodEmoji{
+
+    font-size:30px;
+
+}
+
+.foodTitle{
+
+    font-size:16px;
+
+    font-weight:700;
+
+}
+
+.foodCategory{
+
+    color:#9ca3af;
+
+    font-size:13px;
+
+}
+
+/* ===========================
+   QUANTITY
+=========================== */
+
+#foodQuantity{
+
+    width:100%;
+
+    padding:16px;
+
+    margin-top:20px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:#1c1c1c;
+
+    color:white;
+
+    font-size:17px;
+
+}
+
+#foodUnit{
+
+    color:#9ca3af;
+
+    margin-top:10px;
+
+}
+
+#proteinPreview{
+
+    font-size:24px;
+
+    color:white;
+
+}
+
+#addFoodButton{
+
+    width:100%;
+
+    margin-top:20px;
+
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+#favoriteFoods::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+.modalContent::-webkit-scrollbar{
+
+    width:5px;
+
+}
+
+.modalContent::-webkit-scrollbar-thumb{
+
+    background:#444;
+
+    border-radius:999px;
+
+}
