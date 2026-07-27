@@ -1,1 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <title>Gym Tracker</title>
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>💪 Gym Tracker</h1>
+    <p id="todayDate"></p>
+</header>
+
+<main>
+
+    <!-- Streak -->
+    <section class="card">
+        <h2>🔥 Workout Streak</h2>
+        <h1 id="streak">0 Days</h1>
+    </section>
+
+    <!-- Daily Status -->
+    <section class="card">
+
+        <h2>Today's Status</h2>
+
+        <label>Mood 😊</label>
+        <input type="range" id="mood" min="1" max="10">
+
+        <label>Energy ⚡</label>
+        <input type="range" id="energy" min="1" max="10">
+
+        <label>Pump 💪</label>
+        <input type="range" id="pump" min="1" max="10">
+
+        <label>Sleep 😴</label>
+        <input type="range" id="sleep" min="1" max="10">
+
+        <label>Water 💧</label>
+        <input type="range" id="water" min="0" max="5" step="0.5">
+
+        <button id="saveStatus">Save Status</button>
+
+    </section>
+
+    <!-- Workout -->
+    <section class="card">
+
+        <h2>Workout</h2>
+
+        <h3>Muscles Trained</h3>
+
+        <div class="muscles">
+
+            <label><input type="checkbox" value="Chest"> Chest</label>
+            <label><input type="checkbox" value="Back"> Back</label>
+            <label><input type="checkbox" value="Shoulders"> Shoulders</label>
+            <label><input type="checkbox" value="Arms"> Arms</label>
+            <label><input type="checkbox" value="Legs"> Legs</label>
+            <label><input type="checkbox" value="Core"> Core</label>
+
+        </div>
+
+        <h3>Workout Intensity</h3>
+
+        <select id="intensity">
+            <option>Easy</option>
+            <option selected>Normal</option>
+            <option>Hard</option>
+        </select>
+
+        <label>Workout Duration (minutes)</label>
+
+        <input
+            type="number"
+            id="duration"
+            placeholder="60">
+
+        <textarea
+            id="notes"
+            placeholder="Notes (optional)"></textarea>
+
+        <button id="saveWorkout">
+            Save Workout
+        </button>
+
+    </section>
+
+    <!-- Food -->
+    <section class="card">
+
+        <h2>Food Log</h2>
+
+        <input
+            id="foodInput"
+            type="text"
+            placeholder="Type food and press Enter">
+
+        <div id="foodList"></div>
+
+    </section>
+
+    <!-- Progress -->
+
+    <section class="card">
+
+        <h2>Today's Progress</h2>
+
+        <div class="progressItem">
+
+            <span>Protein</span>
+
+            <progress
+                id="proteinProgress"
+                max="100"
+                value="0">
+            </progress>
+
+        </div>
+
+        <div class="progressItem">
+
+            <span>Water</span>
+
+            <progress
+                id="waterProgress"
+                max="100"
+                value="0">
+            </progress>
+
+        </div>
+
+        <div class="progressItem">
+
+            <span>Sleep</span>
+
+            <progress
+                id="sleepProgress"
+                max="100"
+                value="0">
+            </progress>
+
+        </div>
+
+        <div class="progressItem">
+
+            <span>Consistency</span>
+
+            <progress
+                id="consistencyProgress"
+                max="100"
+                value="0">
+            </progress>
+
+        </div>
+
+        <div class="progressItem">
+
+            <span>Mood</span>
+
+            <progress
+                id="moodProgress"
+                max="100"
+                value="0">
+            </progress>
+
+        </div>
+
+    </section>
+
+    <!-- History -->
+
+    <section class="card">
+
+        <h2>History</h2>
+
+        <div id="history"></div>
+
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
