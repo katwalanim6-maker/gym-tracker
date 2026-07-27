@@ -96,16 +96,76 @@
     </section>
 
     <!-- Food -->
-    <section class="card">
 
-        <h2>Food Log</h2>
+<section class="card">
+
+    <h2>🍗 Food Tracker</h2>
+
+    <button id="openFoodSearch">
+
+        ➕ Add Food
+
+    </button>
+
+    <div id="foodList"></div>
+
+</section>
+
+<!-- Food Search Modal -->
+
+<div id="foodModal" class="modal">
+
+    <div class="modalContent">
 
         <input
-            id="foodInput"
             type="text"
-            placeholder="Type food and press Enter">
+            id="foodSearch"
+            placeholder="🔍 Search Foods...">
 
-        <div id="foodList"></div>
+        <div id="favoriteFoods"></div>
+
+        <div id="foodResults"></div>
+
+    </div>
+
+</div>
+
+<!-- Quantity Modal -->
+
+<div id="quantityModal" class="modal">
+
+    <div class="modalContent">
+
+        <h2 id="selectedFoodName"></h2>
+
+        <input
+            type="number"
+            id="foodQuantity"
+            placeholder="Quantity">
+
+        <p id="foodUnit"></p>
+
+        <h3>
+
+            Protein
+
+            <span id="proteinPreview">
+
+                0g
+
+            </span>
+
+        </h3>
+
+        <button id="addFoodButton">
+
+            Add Food
+
+        </button>
+
+    </div>
+
+</div>
 
     </section>
 
